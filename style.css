@@ -1,0 +1,183 @@
+/*Universelt*/
+p,
+h1,
+h2,
+h3,
+a,
+dd,
+dl,
+dt,
+label,
+option,
+button,
+span {
+  font-family: "Comfortaa";
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*Grids*/
+
+@media (min-width: 1000px) {
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .grid_3-1 {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/*Logo/header*/
+header a {
+  text-decoration: none;
+  text-align: center;
+  color: aliceblue;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+
+header {
+  background-color: black;
+}
+
+/*Kategori*/
+.kategori_btm {
+  background-color: #32cd32;
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.kategori_btm:hover {
+  filter: brightness(125%);
+}
+
+.kategori_btm a {
+  text-decoration: none;
+  color: black;
+}
+
+/*Produktliste*/
+
+.productlist main h2 {
+  margin-top: 5rem;
+  font-size: 300%;
+  grid-column: 1/-1;
+  text-align: center;
+}
+
+.productlist main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
+  gap: 2rem;
+}
+
+.productlist article {
+  display: flex;
+  flex-direction: column;
+}
+
+.productlist article h3 {
+  font-size: 1rem;
+  flex-grow: 3;
+}
+
+.productlist article a:visited {
+  color: black;
+}
+
+.productlist article a:hover {
+  color: red;
+}
+
+.productlist article > * {
+  margin: 0.5rem;
+  font-size: 1rem;
+}
+
+.descriptionPList {
+  color: rgb(167, 167, 167);
+}
+
+.productlist article.onSale::before {
+  content: "SALE";
+  position: absolute;
+  background-color: rgb(233, 26, 26);
+  color: azure;
+  padding: 1rem;
+  font-family: "Comfortaa";
+}
+
+.price_sale {
+  color: red;
+}
+.sale p {
+  color: rgb(130, 130, 130);
+}
+
+.productlist article.soldOut::before {
+  content: "Udsolgt";
+  position: absolute;
+  background-color: black;
+  color: azure;
+  padding: 1rem;
+  font-family: "Comfortaa";
+}
+
+.productlist article.soldOut img {
+  opacity: 0.5;
+}
+
+/*produkt*/
+
+.puchaseBox p {
+  text-decoration: underline;
+  color: rgb(167, 167, 167);
+}
+
+dt {
+  font-weight: bolder;
+}
+
+/*Breadcrumb*/
+
+.breadcrumbs {
+  font-size: 20px;
+  margin: 10px 0;
+  padding: 5px;
+  font-family: "Comfortaa";
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+}
+
+.breadcrumbs a:visited {
+  color: rgb(130, 130, 130);
+}
+
+.breadcrumbs a:hover {
+  color: red;
+}
+
+.breadcrumbs a:not(:last-child):after {
+  content: "/";
+  margin: 0 5px;
+  color: rgb(130, 130, 130);
+}
